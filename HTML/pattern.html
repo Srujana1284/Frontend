@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>User Form</h2>
+    <hr>
+    <br>
+    <form>
+        <!--OM - Capital letters-->
+        <label>Name Caps: </label>
+         <input type="text" id="un" name="username" pattern="^[A-Z]{2,10}$">
+         <br>
+         <br>
+         <!--Gamana - Title Case-->
+         <label>Name vth nly 1st letter capital: </label>
+          <input type="text" id="un" name="username" pattern="^[A-Z]{1}[a-z]{1,50}$">
+         <br>
+         <br>
+        <input type="text" id="un" name="username" pattern="^[A-Za-z]{2,10}$" title="Enter only alphabets" placeholder="Gamana..." value="abc">
+        <br>
+        <br>
+    
+        <label for="pn">Phone Number :</label>
+        <input type="tel" id="un" name="pn" pattern="^\+91[6-9]{1}\d{2}-\d{3}-\d{4}$" title="Enter only number" placeholder="389-589-9890">
+        <br>
+        <br>
+        <!---->
+        <label for="pwd">Password: </label>
+        <input type="text" id="pwd" name="Password" pattern="^[A-Za-z\d@$!%*?&#]{8,}$">
+        <br>
+        <br>
+        <!--lookahead doesnt have special character-->
+        <label for="pwd">look Password: </label>
+        <input type="text" id="pwd" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$">
+        <br>
+        <br>
+        <!--12 character upper lower spcl-->
+        <label for="pwd">Spcl Password: </label>
+        <input type="text" id="pwd" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{12,}$">
+        <br>
+        <br>
+        <label for="pwd">Email:</label>
+        <input type="email" id="pwd" name="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
+        <br>
+        <br>
+        <label>Name: </label>
+        <input type="text" id="un" name="username" pattern="^[A-Za-z]{2,10}$">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

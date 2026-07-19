@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        div{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            background-color: yellow;
+            border: 4px solid black;
+            top: 150px;
+            left: 300px;
+        }
+        /*    transform: translate(50px); /*50px moves to right -50 move to left
+           transform: translate(50px, -100px); /*-ve -upwards +ve -bottm
+           transform: translate(50px, 100px);
+        }
+/*Up or Down transform can be wtitten not on both places */
+        div:hover {
+           /* transform: translate(50%, 50%); */
+        /*   transform: translate(400px, 150px);
+         /*  transform: scale(2); /*Grows x times bigger*/
+         /*transform: rotate(69deg); /*-ve degree anticlockwise +ve degree colockwise*/
+        /* transform: skew(45deg); /*Slants towards X-axis only*/
+       /* transform: skew(20deg,10deg)/*Only Y axis slant is x is 0*/
+       transform-origin: top left;
+       transform: rotate(45deg); /*Jamgs 45 deg from top left -45 for anticlockwise*/
+        }
+    </style>
+</head>
+<body>
+    <div> Hello </div>
+</body>
+</html>

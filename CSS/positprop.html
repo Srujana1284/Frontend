@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties</title>
+    <style>
+        div#static{
+          /*  position: static;  static is default position ,even if static is not mentioned it doent allow nmoment*/
+            width: 100px; height: 100px;
+            border: 2px solid black;
+            background-color: aqua;
+            left: 100px;
+            top: 100;
+        }
+
+        div#rel{
+            position: relative; /*Movable*/
+           width: 100px; height: 100px;
+            border: 2px solid black;
+            background-color: orange;
+            left: 100px;
+            top: 100px; /*from top move 100px to bottom*/
+            bottom: 100px; 
+        } 
+      
+
+        div#parentrel{
+         position: relative; /*Movable*/
+           width: 400px; height: 200px;
+            border: 2px solid black;    
+        } 
+/*Parent must be realtive & child must
+ be absolute to be connected --- if parent is not specified(relative)
+  browser screen acts as parent and child acts accoringly*/
+        div#childabs {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            left: 300px; /*moves from lrft right 300px*/
+            top: 100px; /*if parent is not relative it moves according to browser height*/
+        }
+    </style>
+</head>
+<body>
+    <div id="static">Static Dive</div>
+    <div id="parentrel">
+        <div id="childabs"></div>
+    </div>
+ <div id="rel">Relative Div</div>
+</body>
+</html>

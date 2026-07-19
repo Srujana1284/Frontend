@@ -1,0 +1,23 @@
+// Function for setTimeout
+function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function Bookticket() {
+    await wait(8000);
+    console.log("1. Open BookMyShow"); // 8sec
+
+    await wait(3000);
+    console.log("2. Search Movie"); // 3 secs
+
+    await wait(5000);
+    console.log("3. Select seats"); // 5 secs
+
+    await wait(1000);
+    console.log("4. Make payment"); // 1 sec
+
+    await wait(2000);
+    console.log("5. Ticket Booked"); // 2secs
+}
+
+Bookticket();

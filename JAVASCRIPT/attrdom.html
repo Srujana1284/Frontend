@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Manipulation</title>
+</head>
+<body>
+
+    <!-- Target anchor element with an initial href attribute -->
+    <a href="https://www.kodnest.com">Click to visit kodnest</a>
+    <br><br>
+
+    <!-- Interactive Buttons -->
+    <button onclick="setattr()">set attr</button>
+    <button onclick="getattr()">get attr</button>
+    <button onclick="removeattr()">remove attr</button>
+
+    <script>
+        // Select the anchor tag element
+        let link = document.querySelector("a");
+
+        // 1. Changes or sets an attribute's value
+        function setattr() {
+            link.setAttribute("href", "https://www.instagram.com");
+            link.innerText = "Click to visit instagram";
+        }
+
+        // 2. Retrieves the current value of an attribute
+        function getattr() {
+            let url = link.getAttribute("href");
+            alert("The url is -> " + url);
+        }
+
+        // 3. Removes the attribute entirely from the element
+        function removeattr() {
+            link.removeAttribute("href");
+            alert("The href attr is removed");
+        }
+    </script>
+    
+</body>
+</html>

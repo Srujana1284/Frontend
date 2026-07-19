@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popups</title>
+</head>
+<body>
+    <h4>Popups in JavaScript</h4>
+    <hr>
+    <script>
+        //Alert
+        alert("Form is submitted successfully!");
+        alert("Warning only 500mb left!");
+
+        //Confirm
+        let choice =confirm("Do you want to continue?");
+        document.write(choice); // Output: true or false based on user input
+        document.writeln("<br>");
+        document.writeln("The user selected: ", (choice ? "OK" : "Cancel"));
+
+        //Prompt
+   let name = prompt("Enter your name:"); // Output: User input or null if cancelled
+        alert("The user entered " + name); // Output: User input or null if cancelled
+
+        //Prompt to add 2 numbers from user
+        let n1 = Number(prompt("Enter first number:"));
+        let n2 = Number(prompt("Enter second number:"));
+        let sum = (n1) + (n2);
+        document.write(sum); // Output: Concatenated string of numbers (e.g., "The sum of 5 and 10 is: 510")
+
+        //Do-While Loop: ATM Machine:Keep asking PIN until the user enters 1234
+        let pin;
+        do {
+            pin = parseInt(prompt("Enter your PIN:"));
+        } while (pin !== 1234);
+
+        document.writeln("Access granted!"); // Output: "Access granted!" after correct PIN is entered
+    </script>
+</body>
+</html>

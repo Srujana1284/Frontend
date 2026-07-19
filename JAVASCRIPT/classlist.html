@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classlists in JS</title>
+    <style>
+        /* The CSS class that will be dynamically manipulated */
+        .highlight {
+            background-color: brown;
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Target element with an initial ID -->
+    <h2 id="text">Hello Everyone, welcome to Kodnest</h2>
+
+    <!-- Interactive Buttons -->
+    <button onclick="addstyle()">Add style</button>
+    <button onclick="removestyle()">Remove style</button>
+    <button onclick="togglestyle()">Toggle style</button>
+    <button onclick="containstyle()">Contain style</button>
+
+    <script>
+        // Select the target element once globally
+        let txt = document.getElementById("text");
+
+        // 1. Adds the class to the element
+        function addstyle() {
+            txt.classList.add("highlight");
+        }
+
+        // 2. Removes the class from the element
+        function removestyle() {
+            txt.classList.remove("highlight");
+        }
+
+        // 3. Toggles the class (Adds if missing, removes if present)
+        function togglestyle() {
+            txt.classList.toggle("highlight");
+        }
+
+        // 4. Checks if the class is currently applied
+        function containstyle() {
+            let hasClass = txt.classList.contains("highlight");
+            console.log("Does it have the class?", hasClass);
+            alert("Has highlight class: " + hasClass);
+        }
+    </script>
+    
+</body>
+</html>

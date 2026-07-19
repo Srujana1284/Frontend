@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+function outer() {
+    var a = 3;
+    return function inner() {
+        console.log(a);
+    }
+}
+let res = outer();  
+res();  // Output: 3 
+res();  // Output: 3
+
+
+// Example 2: Closure with parameters
+function createBankAccount(initialBalance) {
+    let balance = initialBalance;
+
+    return {
+        deposit: function (amount) {
+            balance += amount;
+            console.log(`Deposited: $${amount}, Balance: $${balance}`);
+        },
+        withdraw: function (amount) {
+            if (amount > balance) {
+                console.log(`Insufficient funds! Current Balance: $${balance}`);
+            } else {
+                balance -= amount;
+                console.log(`Withdrawn: $${amount}, Balance: $${balance}`);
+            }
+        },
+    //    getBalance: function () {
+     //       return balance;
+        }
+    };
+//}
+
+const account = createBankAccount(1000);
+account.deposit(500);     // Deposited: $500, Balance: $1500
+account.withdraw(200);    // Withdrawn: $200, Balance: $1300
+account.withdraw(2000);   // Insufficient funds! Current Balance: $1300
+console.log("Final Balance:", account.getBalance()); // Final Balance: 1300
+    </script>
+</body>
+</html>

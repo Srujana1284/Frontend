@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body {
+            background-color: white;
+            font-size: 20px;
+        }
+
+        /*Laptop*/
+        @media(max-width: 2560px) {
+            body {
+                background-color: aqua;
+                font-size: 26px;
+            }
+            h1{
+                font-style: italic;
+            }
+        }
+    
+        /*Tablet*/
+        @media(max-width: 768px) {
+            body {
+                background-color: blueviolet;
+                color: rgb(34, 110, 91);
+                font-size: 22px;
+            }
+        }
+
+        /*Mobile*/
+        @media(max-width: 425px) and (min-width: 320px) {
+            body {
+                background-color: yellow;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my website</h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero officiis at nemo minima, dolore dignissimos sunt? Illum eum ex eius quasi libero magni accusamus nobis modi, doloribus voluptatum inventore quibusdam. Cumque rerum culpa ipsa, modi neque odio quos sapiente sunt nemo! Et placeat doloribus tempore voluptatibus autem nostrum repellendus esse error veritatis!</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+</head>
+<body>
+    <!--Login Page-->
+    <div class="container" id="loginPage">
+        <div class="card">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Enter Email" required><br>
+            <input type="password" id="password" placeholder="Enter Password" required><br>
+            <button onclick="login()">Login</button>
+            <p id="errorMsg" style="color: red;"></p>
+        </div>
+    </div>
+
+    <!--Movie Page-->
+    <div id="moviePage">
+        <h1 style="text-align: center;">Movie Search</h1>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="searchInput" placeholder="Enter movie name">
+            <button onclick="searchMovie()">Search</button>
+        </div>
+        <ul id="movieLisr">Movies here</ul>
+    </div>
+
+    <script>
+        
+    </script>
+</body> 
+</html>

@@ -1,0 +1,35 @@
+/*Universal selector - (*)*/
+*{
+    font-style: italic;
+    color: darkmagenta;
+}
+
+/* Type/Tap Selector*  style p*/
+p{
+    background-color: yellow;
+    color: blueviolet;
+}
+h3{
+    text-align: center  ;
+}
+
+/* ID Selector - unique*/
+#para {
+    text-align: center;
+}
+
+/* Class Selector */
+.redpara {
+    color: rgb(146, 39, 39);
+}
+
+.line {
+    text-decoration: underline;
+}
+
+/*Group Selector*/
+h1, h3, h5 {
+    background-color: aquamarine; 
+}
+
+/*Attridute Selectors[]*/

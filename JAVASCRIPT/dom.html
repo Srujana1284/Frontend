@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+ <!---  <h1>DOM Methods</h1>
+    <p>getElementsBytagname</p>
+    <P>getElementsbyId</P>
+    <p>getElementsbyclassname</p>
+    <p>getElementsbyname</p> --->
+
+    <h1>DOM methods</h1>
+    <p>getElementsByTagName</p>
+    <p id="para1" class="bluetext">getElementById</p>
+    <p class="bluetext">getElementsByClassName</p>
+    <p>getElementsByName</p>
+    <button onclick="change()">Click me to change</button>
+
+    <script>
+        // Styling specific elements directly
+        document.getElementsByTagName("p")[0].style.color = "green";
+        document.getElementById("para1").style.fontSize = "50px";
+
+        // Styling elements by class using a loop
+        let bt = document.getElementsByClassName("bluetext");
+        for(let i = 0; i < bt.length; i++) {
+            bt[i].style.color = "blue";
+            bt[i].style.backgroundColor = "green";
+        }
+
+        // Function triggered by the button click
+        function change() {
+            let paras = document.getElementsByTagName("p");
+            for(let i = 0; i < paras.length; i++) {
+                paras[i].style.color = "red";
+                paras[i].style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+
+    <script>
+        document.getElementsByTagName("p")[0].style.color = "red";
+    </script>
+</body>
+</html>

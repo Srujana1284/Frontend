@@ -1,0 +1,36 @@
+//Function Overloading - Function with same name but different parameters 
+//Function overloading is not supported in jS nly last written pgm vll be executed
+
+
+function add() {
+    console.log(10 + 10); //0 parameters
+}
+
+function add(a) {
+    console.log(a+ 10);  // 1 Parameter
+}
+
+function add(a, b) {
+    console.log(a + b); // 2 Parameter
+}
+
+add() //NaN
+add(10) //NaN
+add(10,20) //30
+
+//... -> Spread Operator [Rest operator] (feaure ES6)
+//Spread Operator basically treadted as 1D Array
+//... 0-n ---> 1D[] numbers = [10, ] num = 10 sum = 10
+//here numbers act as 1D Array  numbers = [10, 30] num = 30 sum = 40
+function add(...numbers) {
+    let sum = 0;
+    for(let num of numbers){
+        sum = sum + num; //sum += num;
+    }
+    return sum;
+    confirm.log(`The sum is ${sum}`);
+}
+
+console.log(add(10));
+console.log(add(10, 30));
+console.log(add(10, 30, 40));

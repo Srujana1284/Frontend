@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JS</title>
+</head>
+<body>
+    <script>
+      //  const a = 10; //cant reinitialize,cant redeclare
+        var a = 10;
+      // let a = 10; //let can be reinitialised not redeclared
+        a = 20; //re-initialize
+        var a = 30;  //redeclare
+        console.log(a);
+
+        //scope-function var
+        function varvari() {
+            var name = "Interstellar";
+            console.log(name); //can be accessed nly inside function
+        }
+
+        /*console.log(name); - Error cant be accessed outside function*/
+        varvari()
+
+        //scope - let & const (block-scpes)
+        if(true) {
+            let z = 100;
+            const pi = 3.14;
+            console.log(z);
+            console.log(pi);
+        }
+
+        /*console.log(z) - let,const;  error-outside block as it cant be accessed*/
+   
+      //RULES FOR NAMING VARIABLES
+
+        //Variables are case sensitive
+        //variables A-Z, a-z, 0-9
+        //Special characters $ and _ (only dollar or underscore)
+        //varable cant start with a digit but can end, an stay b/w 1Age --wrong Age1 --right
+        //variable cant be keywords 
+
+        //standard - snakecase _(stu_agr), camel case(stuAge ),
+   let $age = 20;
+   console.log(age);
+
+   let Age = 35;
+   Age = Age + 1;
+   console.log(Age);
+   
+    </script>
+</body>
+</html>
+
+/*student age-let 
+student marks-let/const
+student mom name - const
+*/

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            background-color: red;
+            color: lavender;
+            animation-name: colorchange;
+            animation-duration: 3s;
+            animation-iteration-count: 2; /*infinite*/
+        }
+        h1 {
+            animation-name: fadeIn;
+            animation-duration: 4s;
+            animation-delay: 3s;
+            animation-timing-function: linear; /*ease-animation slowly starts becomes fast and ends slowly. linear-constant speed*/
+        }
+        p {
+            animation-name: slideIn;
+            animation-duration: 6s;
+            animation-timing-function: ease-out;
+        }
+        /*Animation is defined using keyframs*/
+     /*   @keyframes colorchange {
+            from {background-color: red;}
+            to {background-color: plum;}
+        } */ /*It can be used to change from one color to other 2 clrs*/
+         @keyframes colorchange {
+            20% {background-color: red;}
+            40% {background-color: plum;}
+            60% {background-color: aquamarine;}
+            80% {background-color: crimson;}
+            100% {background-color:teal;}
+         }
+         @keyframes fadeIn {
+            0% {
+                opacity: 0; /*1-0 dark to light*/
+            }
+            100% {
+                overflow: 1;
+            }
+         }
+         @keyframes slideIn {
+          0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }  
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+         }
+    </style>
+</head>
+<body>
+    <h1>Animations in CSS</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum et doloremque,
+         officiis voluptates porro atque minus dignissimos odio deserunt ipsam beatae. 
+         Quibusdam in praesentium numquam velit, repellendus iste nobis.</p>
+</body>
+</html>
